@@ -3,11 +3,13 @@
 using FootballLeaguesStandingsTableProject.Models;
 
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 using RestSharp;
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 
 namespace FootballLeaguesStandingsTableProject.ViewModels;
@@ -17,36 +19,29 @@ public partial class MainViewModel : ViewModelBase
 
     public MainViewModel()
     {
-		this.LoadTransitons();
-		this.GetApiData();
+		this.LoadLeagues();
 	}
 
 	#region Properties
 
 	[ObservableProperty]
-	public ObservableCollection<IdNameModel> _transitionsList = new ObservableCollection<IdNameModel>();
+	public ObservableCollection<FootballCountryModel> _footballLeaguesList = new ObservableCollection<FootballCountryModel>();
 
 	[ObservableProperty]
-	public IdNameModel _selectedTransition = new IdNameModel();
+	public FootballCountryModel _selectedFootballLeague = new FootballCountryModel();
 
 	#endregion
 
 	#region Methods
 
-	private void LoadTransitons()
+	private void LoadLeagues()
 	{
+		this.FootballLeaguesList = new ObservableCollection<FootballCountryModel>(this.GetApiData());
 
-		var none = new IdNameModel() { Id = 1, Name = "None" };
-
-		var one = new IdNameModel() { Name = "one", Id = 2 };
-
-		var two = new IdNameModel() { Name = "two", Id = 3 };
-
-		var three = new IdNameModel() { Name = "three", Id = 4 };
-
-		this.TransitionsList = new ObservableCollection<IdNameModel>() { none, one, two, three };
-
-		this.SelectedTransition = this.TransitionsList.FirstOrDefault();
+		if (this.FootballLeaguesList != null)
+		{
+			this.SelectedFootballLeague = this.FootballLeaguesList.FirstOrDefault();
+		}
 	}
 
     private void RaiseAndSetProp(ref IdNameModel prop)
@@ -58,26 +53,47 @@ public partial class MainViewModel : ViewModelBase
 	{
 		base.OnPropertyChanged(e);
 
-		if (e.PropertyName == nameof(SelectedTransition))
+		if (e.PropertyName == nameof(SelectedFootballLeague))
 		{
 
 		}
 	}
 
-	private void GetApiData()
+	private ObservableCollection<FootballCountryModel> GetApiData()
 	{
-		var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
-		var request = new RestRequest("https://v3.football.api-sports.io/leagues",Method.Get) { RequestFormat = DataFormat.Json };
-		request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");
-		request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
-		RestResponse response = client.Execute(request);
+		//var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
+		//var request = new RestRequest("https://v3.football.api-sports.io/leagues",Method.Get) { RequestFormat = DataFormat.Json };
+		//request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");
+		//request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
+		//RestResponse response = client.Execute(request);
 
-		if (response.StatusCode == System.Net.HttpStatusCode.OK)
+		//if (response.StatusCode == System.Net.HttpStatusCode.OK)
+		//{
+		//	var jsonObj = (JObject)JsonConvert.DeserializeObject(response.Content);
+
+		//	if (jsonObj != null)
+		//	{
+		//		var leagues = jsonObj["response"].SelectMany(x => x["league"], x[""]);
+		//	}
+		//}
+
+		var movie1 = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\Lyubomir\Source\Repos\FootballLeague\JSonLeagues.json"));
+		var leaguesList = new ObservableCollection<FootballCountryModel>();
+		foreach (var league in movie1.Response)
 		{
-			dynamic jsonObj = JsonConvert.DeserializeObject<Results>(response.Content);
+			var st = league.ToString();
+			var lg = JsonConvert.DeserializeObject<Results>(league.ToString());
+			var dasda = lg.JsonResults;
+			var delg = JsonConvert.DeserializeObject<FootballCountryModel>(lg.JsonResults.ToString());
+
+			if (delg != null)
+			{
+				leaguesList.Add(delg);
+			}
 		}
 
-		var test = 1;
+		return leaguesList;
+
 	}
 
 	#endregion

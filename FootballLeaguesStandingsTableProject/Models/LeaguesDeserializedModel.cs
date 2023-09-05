@@ -24,6 +24,6 @@ namespace FootballLeaguesStandingsTableProject.Models
 		public object Pagin { get; set; }
 
 		[JsonProperty("response")]
-		public List<FootballCountryModel> Response { get; set; }
+		public List<object> Response { get; set; }
 	}
 }

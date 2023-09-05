@@ -15,8 +15,8 @@
 
     <Grid RowDefinitions="Auto, Auto, Auto, *, 10">
 
-       <ComboBox ItemsSource="{Binding TransitionsList}"
-                 SelectedItem="{Binding SelectedTransition }">
+       <ComboBox ItemsSource="{Binding FootballLeaguesList}"
+                 SelectedItem="{Binding SelectedFootballLeague }">
            <ComboBox.ItemTemplate>
                <DataTemplate>
                    <TextBlock Text="{Binding Name}"/>

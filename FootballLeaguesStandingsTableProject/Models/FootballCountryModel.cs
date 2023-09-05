@@ -23,7 +23,7 @@ namespace FootballLeaguesStandingsTableProject.Models
 	{
 
         [JsonProperty("league")]
-        public Dictionary<string, FootballCountryModel> JsonResults { get; set; }
+        public object JsonResults { get; set; }
     }
 
 	public class JsonRootObject
