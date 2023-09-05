@@ -3727,25 +3727,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lyubomir\\.nuget\\packages\\": {},
+    "C:\\Users\\beckh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lyubomir\\Source\\Repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
+      "projectUniqueName": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
       "projectName": "FootballLeaguesStandingsTableProject",
-      "projectPath": "C:\\Users\\Lyubomir\\Source\\Repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
-      "packagesPath": "C:\\Users\\Lyubomir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lyubomir\\Source\\Repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\obj\\",
+      "projectPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
+      "packagesPath": "C:\\Users\\beckh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lyubomir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beckh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -61,6 +61,8 @@ public partial class MainViewModel : ViewModelBase
 
 	private ObservableCollection<FootballCountryModel> GetApiData()
 	{
+		#region Api Call 
+
 		//var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
 		//var request = new RestRequest("https://v3.football.api-sports.io/leagues",Method.Get) { RequestFormat = DataFormat.Json };
 		//request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");
@@ -77,23 +79,25 @@ public partial class MainViewModel : ViewModelBase
 		//	}
 		//}
 
-		var movie1 = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\Lyubomir\Source\Repos\FootballLeague\JSonLeagues.json"));
-		var leaguesList = new ObservableCollection<FootballCountryModel>();
-		foreach (var league in movie1.Response)
-		{
-			var st = league.ToString();
-			var lg = JsonConvert.DeserializeObject<Results>(league.ToString());
-			var dasda = lg.JsonResults;
-			var delg = JsonConvert.DeserializeObject<FootballCountryModel>(lg.JsonResults.ToString());
+		#endregion End Api Call
 
-			if (delg != null)
+		//path for Desktop PC => C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json
+		//path for Laptop => C:\Users\Lyubomir\Source\Repos\FootballLeague\JSonLeagues.json
+		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json"));
+		var leaguesList = new ObservableCollection<FootballCountryModel>();
+
+		foreach (var rawLeagueData in rawLeaguesDataJSON.Response)
+		{
+			var lg = JsonConvert.DeserializeObject<Results>(rawLeagueData.ToString());
+			var leagueData = JsonConvert.DeserializeObject<FootballCountryModel>(lg.JsonResults.ToString());
+
+			if (leagueData != null)
 			{
-				leaguesList.Add(delg);
+				leaguesList.Add(leagueData);
 			}
 		}
 
 		return leaguesList;
-
 	}
 
 	#endregion
