@@ -76,6 +76,8 @@ public partial class MainViewModel : ViewModelBase
 		{
 			dynamic jsonObj = JsonConvert.DeserializeObject<Results>(response.Content);
 		}
+
+		var test = 1;
 	}
 
 	#endregion
