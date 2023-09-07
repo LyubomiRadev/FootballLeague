@@ -13,13 +13,13 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FootballLeaguesStandingsTableProject
-build_property.ProjectDir = C:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject\
+build_property.ProjectDir = C:\Users\Lyubomir\Source\Repos\FootballLeague\FootballLeaguesStandingsTableProject\
 
-[C:/Users/beckh/source/repos/FootballLeague/FootballLeaguesStandingsTableProject/App.axaml]
+[C:/Users/Lyubomir/Source/Repos/FootballLeague/FootballLeaguesStandingsTableProject/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/beckh/source/repos/FootballLeague/FootballLeaguesStandingsTableProject/Views/MainView.axaml]
+[C:/Users/Lyubomir/Source/Repos/FootballLeague/FootballLeaguesStandingsTableProject/Views/MainView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/beckh/source/repos/FootballLeague/FootballLeaguesStandingsTableProject/Views/MainWindow.axaml]
+[C:/Users/Lyubomir/Source/Repos/FootballLeague/FootballLeaguesStandingsTableProject/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
