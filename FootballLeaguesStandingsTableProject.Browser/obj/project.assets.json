@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "AsyncImageLoader.Avalonia/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AsyncImageLoader.Avalonia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AsyncImageLoader.Avalonia.dll": {}
+        }
+      },
       "Avalonia/11.0.4": {
         "type": "package",
         "dependencies": {
@@ -1279,6 +1291,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "AsyncImageLoader.Avalonia": "3.2.0",
           "Avalonia": "11.0.4",
           "Avalonia.Diagnostics": "11.0.4",
           "Avalonia.Fonts.Inter": "11.0.4",
@@ -1296,6 +1309,18 @@
       }
     },
     "net7.0/browser-wasm": {
+      "AsyncImageLoader.Avalonia/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AsyncImageLoader.Avalonia.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AsyncImageLoader.Avalonia.dll": {}
+        }
+      },
       "Avalonia/11.0.4": {
         "type": "package",
         "dependencies": {
@@ -2621,6 +2646,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "AsyncImageLoader.Avalonia": "3.2.0",
           "Avalonia": "11.0.4",
           "Avalonia.Diagnostics": "11.0.4",
           "Avalonia.Fonts.Inter": "11.0.4",
@@ -2639,6 +2665,20 @@
     }
   },
   "libraries": {
+    "AsyncImageLoader.Avalonia/3.2.0": {
+      "sha512": "g491s3DkCHzA4rAOhuczIM25fP3DBkfLHW9OpXJUBbPqB9Yl8UhczFA+s7wg3yrAckGXld2LyenFYDJqEzm3RQ==",
+      "type": "package",
+      "path": "asyncimageloader.avalonia/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "asyncimageloader.avalonia.3.2.0.nupkg.sha512",
+        "asyncimageloader.avalonia.nuspec",
+        "lib/netstandard2.0/AsyncImageLoader.Avalonia.dll",
+        "lib/netstandard2.1/AsyncImageLoader.Avalonia.dll"
+      ]
+    },
     "Avalonia/11.0.4": {
       "sha512": "OZIUjmQcZHHH21DldSMbqf2J1fKKC+V5gn0Lz2VdWI9LDHgVseEFx9TM9TzF5D6pH6qnkCFgAGABD6/Kaa0vSg==",
       "type": "package",

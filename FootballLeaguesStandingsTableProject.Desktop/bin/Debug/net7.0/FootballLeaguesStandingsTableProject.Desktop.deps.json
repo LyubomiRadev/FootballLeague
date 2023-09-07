@@ -16,6 +16,17 @@
           "FootballLeaguesStandingsTableProject.Desktop.dll": {}
         }
       },
+      "AsyncImageLoader.Avalonia/3.2.0": {
+        "dependencies": {
+          "Avalonia": "11.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AsyncImageLoader.Avalonia.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
       "Avalonia/11.0.4": {
         "dependencies": {
           "Avalonia.BuildServices": "0.0.29",
@@ -960,6 +971,7 @@
       },
       "FootballLeaguesStandingsTableProject/1.0.0": {
         "dependencies": {
+          "AsyncImageLoader.Avalonia": "3.2.0",
           "Avalonia": "11.0.4",
           "Avalonia.Diagnostics": "11.0.4",
           "Avalonia.Fonts.Inter": "11.0.4",
@@ -979,6 +991,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AsyncImageLoader.Avalonia/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g491s3DkCHzA4rAOhuczIM25fP3DBkfLHW9OpXJUBbPqB9Yl8UhczFA+s7wg3yrAckGXld2LyenFYDJqEzm3RQ==",
+      "path": "asyncimageloader.avalonia/3.2.0",
+      "hashPath": "asyncimageloader.avalonia.3.2.0.nupkg.sha512"
     },
     "Avalonia/11.0.4": {
       "type": "package",

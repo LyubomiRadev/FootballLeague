@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "js33kt5qIN9u6VW5UXFOBHDKuid7T+6lg9Vqyv8JNCYS4BHHNV3inEX3nzWmONIFL6OZJ6y2VVq1G2n+5DBxZg==",
+  "dgSpecHash": "iobs/vZ50flIjmZNk8rzqxy0jST6lR9i5piKQMmjya4LHhUeElNC1Rr6tI+ofBqltbkQAEmvO5wcCkaYZel5xA==",
   "success": true,
   "projectFilePath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Browser\\FootballLeaguesStandingsTableProject.Browser.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\beckh\\.nuget\\packages\\asyncimageloader.avalonia\\3.2.0\\asyncimageloader.avalonia.3.2.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia\\11.0.4\\avalonia.11.0.4.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia.browser\\11.0.4\\avalonia.browser.11.0.4.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia.buildservices\\0.0.29\\avalonia.buildservices.0.0.29.nupkg.sha512",

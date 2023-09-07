@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1ynD7W7DaVchBAtewXEpGaE8oNSHz6hKfhgoeEVkUs4Vuge+19TR0ScYkFdi2mHfaB//LCZQq5eIkZlo4VLWcw==",
+  "dgSpecHash": "UMoWgTItcItOACG9xDmf1dsGqr0FM3N3kHTaDlLREwy9xgtjibbob8OwrIht7KZRUumMR9LxBRPiZxtqt4zsDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\beckh\\.nuget\\packages\\asyncimageloader.avalonia\\3.2.0\\asyncimageloader.avalonia.3.2.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia\\11.0.4\\avalonia.11.0.4.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia.buildservices\\0.0.29\\avalonia.buildservices.0.0.29.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia.controls.colorpicker\\11.0.4\\avalonia.controls.colorpicker.11.0.4.nupkg.sha512",
