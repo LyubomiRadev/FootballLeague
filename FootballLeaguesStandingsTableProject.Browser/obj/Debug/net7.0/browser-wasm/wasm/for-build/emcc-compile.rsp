@@ -1,6 +1,6 @@
 -O0
 -s ASSERTIONS=0
---js-library="C:\Users\Lyubomir\.nuget\packages\avalonia.browser\11.0.4\buildTransitive\\interop.js" -sERROR_ON_UNDEFINED_SYMBOLS=0
+--js-library="C:\Users\beckh\.nuget\packages\avalonia.browser\11.0.4\buildTransitive\\interop.js" -sERROR_ON_UNDEFINED_SYMBOLS=0
 -s EXPORT_ES6=1
 -g
 -v
@@ -10,7 +10,7 @@
 -DCORE_BINDINGS
 -DGEN_PINVOKE=1
 -emit-llvm
-"-IC:\Users\Lyubomir\Source\Repos\FootballLeague\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\wasm\for-build"
+"-IC:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\wasm\for-build"
 "-IC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\7.0.10\runtimes\browser-wasm\native\include\mono-2.0"
 "-IC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\7.0.10\runtimes\browser-wasm\native\include\wasm"
 -g
