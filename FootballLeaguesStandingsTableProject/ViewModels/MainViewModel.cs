@@ -63,39 +63,35 @@ public partial class MainViewModel : ViewModelBase
 	{
 		#region Api Call 
 
-		//var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
-		//var request = new RestRequest("https://v3.football.api-sports.io/leagues",Method.Get) { RequestFormat = DataFormat.Json };
-		//request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");
-		//request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
-		//RestResponse response = client.Execute(request);
+		var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
+		var request = new RestRequest("https://v3.football.api-sports.io/leagues", Method.Get) { RequestFormat = DataFormat.Json };
+		request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");
+		request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
+		RestResponse response = client.Execute(request);
+		var leaguesList = new ObservableCollection<FootballCountryModel>();
 
-		//if (response.StatusCode == System.Net.HttpStatusCode.OK)
-		//{
-		//	var jsonObj = (JObject)JsonConvert.DeserializeObject(response.Content);
-
-		//	if (jsonObj != null)
-		//	{
-		//		var leagues = jsonObj["response"].SelectMany(x => x["league"], x[""]);
-		//	}
-		//}
+		if (response.StatusCode == System.Net.HttpStatusCode.OK)
+		{
+			leaguesList = new ObservableCollection<FootballCountryModel>(JObject.Parse(response.Content)["response"].Select(x => x["league"].ToObject<FootballCountryModel>()).ToList());
+		}
 
 		#endregion End Api Call
 
-		//path for Desktop PC => C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json
-		//path for Laptop => C:\Users\Lyubomir\Source\Repos\FootballLeague\JSonLeagues.json
-		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json"));
-		var leaguesList = new ObservableCollection<FootballCountryModel>();
+		////path for Desktop PC => C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json
+		////path for Laptop => C:\Users\Lyubomir\Source\Repos\FootballLeague\JSonLeagues.json
+		//var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json"));
+		//var leaguesList = new ObservableCollection<FootballCountryModel>();
 
-		foreach (var rawLeagueData in rawLeaguesDataJSON.Response)
-		{
-			var lg = JsonConvert.DeserializeObject<Results>(rawLeagueData.ToString());
-			var leagueData = JsonConvert.DeserializeObject<FootballCountryModel>(lg.JsonResults.ToString());
+		//foreach (var rawLeagueData in rawLeaguesDataJSON.Response)
+		//{
+		//	var lg = JsonConvert.DeserializeObject<Results>(rawLeagueData.ToString());
+		//	var leagueData = JsonConvert.DeserializeObject<FootballCountryModel>(lg.JsonResults.ToString());
 
-			if (leagueData != null)
-			{
-				leaguesList.Add(leagueData);
-			}
-		}
+		//	if (leagueData != null)
+		//	{
+		//		leaguesList.Add(leagueData);
+		//	}
+		//}
 
 		return leaguesList;
 	}
