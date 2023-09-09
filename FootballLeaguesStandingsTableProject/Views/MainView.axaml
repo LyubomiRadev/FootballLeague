@@ -18,7 +18,8 @@
 
     <Grid RowDefinitions="Auto, Auto, Auto, *, 10">
 
-        <ComboBox ItemsSource="{Binding FootballLeaguesList}"
+        <ComboBox Grid.Row="0"
+                  ItemsSource="{Binding FootballLeaguesList}"
                   SelectedItem="{Binding SelectedFootballLeague }">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -36,6 +37,20 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+
+        <DataGrid Grid.Row="1"
+                  Background="Red"
+                  ItemsSource="{Binding LeagueData.Standings}">
+
+            <!--<DataGrid.Columns>
+                <DataGridTextColumn Header="#"
+                                    FontWeight="Bold"
+                                    Binding="{Binding Position}">
+                    
+                </DataGridTextColumn>
+            </DataGrid.Columns>-->
+
+        </DataGrid>
 
     </Grid>
 </UserControl>
