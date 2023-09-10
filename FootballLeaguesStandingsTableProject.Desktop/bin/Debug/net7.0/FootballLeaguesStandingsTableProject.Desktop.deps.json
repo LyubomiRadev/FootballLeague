@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "FootballLeaguesStandingsTableProject.Desktop/1.0.0": {
         "dependencies": {
+          "Avalonia.Controls.DataGrid": "11.0.4",
           "Avalonia.Desktop": "11.0.4",
           "Avalonia.LinuxFramebuffer": "11.0.4",
           "FootballLeaguesStandingsTableProject": "1.0.0"
@@ -973,6 +974,7 @@
         "dependencies": {
           "AsyncImageLoader.Avalonia": "3.2.0",
           "Avalonia": "11.0.4",
+          "Avalonia.Controls.DataGrid": "11.0.4",
           "Avalonia.Diagnostics": "11.0.4",
           "Avalonia.Fonts.Inter": "11.0.4",
           "Avalonia.Themes.Fluent": "11.0.4",

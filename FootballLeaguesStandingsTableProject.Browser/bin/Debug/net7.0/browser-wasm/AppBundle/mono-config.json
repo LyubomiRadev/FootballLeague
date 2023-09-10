@@ -5,6 +5,10 @@
   "assets": [
     {
       "behavior": "assembly",
+      "name": "AsyncImageLoader.Avalonia.dll"
+    },
+    {
+      "behavior": "assembly",
       "name": "Avalonia.Base.dll"
     },
     {

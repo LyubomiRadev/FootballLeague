@@ -35,6 +35,9 @@ public partial class MainViewModel : ViewModelBase
 	[ObservableProperty]
 	public LeagueModel _leagueData = new LeagueModel();
 
+	[ObservableProperty]
+	public ObservableCollection<FootballTeamInfoModel> _standings = new ObservableCollection<FootballTeamInfoModel>();
+
 	#endregion
 
 	#region Methods
@@ -53,11 +56,12 @@ public partial class MainViewModel : ViewModelBase
 	{
 		base.OnPropertyChanged(e);
 
-		//if (e.PropertyName == nameof(SelectedFootballLeague))
-		//{
-		//	var data = new LeagueModel(this.GetLeaugeStandings(leagueId: this.SelectedFootballLeague.ID));
-		//	this.LeagueData = new LeagueModel(data);
-		//}
+		if (e.PropertyName == nameof(SelectedFootballLeague))
+		{
+			var data = new LeagueModel(this.GetLeaugeStandings(leagueId: this.SelectedFootballLeague.ID));
+			this.LeagueData = new LeagueModel(data: data,getStandingsCollection: true);
+			this.Standings = new ObservableCollection<FootballTeamInfoModel>(this.LeagueData.StandingsCollection);
+		}
 	}
 
 	#region Get API Data
@@ -89,8 +93,8 @@ public partial class MainViewModel : ViewModelBase
 		#region Depricated JSON PARSING
 
 		//path for Desktop PC => C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json
-		//path for Laptop => C:\Users\Lyubomir\Source\Repos\FootballLeague\JSonLeagues.json
-		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json"));
+		//path for Laptop => D:\Projects\Avalonia Projects\JSonLeagues.json
+		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"D:\Projects\Avalonia Projects\JSonLeagues.json"));
 		leaguesList = new ObservableCollection<FootballCountryModel>();
 
 		foreach (var rawLeagueData in rawLeaguesDataJSON.Response)

@@ -39,16 +39,32 @@
         </ComboBox>
 
         <DataGrid Grid.Row="1"
-                  Background="Red"
-                  ItemsSource="{Binding LeagueData.Standings}">
+                  Width="300"
+                  Height="400"
+                  ItemsSource="{Binding Standings}">
 
-            <!--<DataGrid.Columns>
+            <DataGrid.Columns>
                 <DataGridTextColumn Header="#"
                                     FontWeight="Bold"
-                                    Binding="{Binding Position}">
-                    
+                                    Foreground="Black"
+                                    Binding="{Binding LeaguePosition}">
+
                 </DataGridTextColumn>
-            </DataGrid.Columns>-->
+
+                <DataGridTextColumn Header="#"
+                    FontWeight="Bold"
+                                    Foreground="Black"
+                    Binding="{Binding TeamData.Name}">
+
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Points"
+                                    Foreground="Black"
+                                   FontWeight="Bold"
+                                   Binding="{Binding Points}">
+
+                </DataGridTextColumn>
+            </DataGrid.Columns>
 
         </DataGrid>
 

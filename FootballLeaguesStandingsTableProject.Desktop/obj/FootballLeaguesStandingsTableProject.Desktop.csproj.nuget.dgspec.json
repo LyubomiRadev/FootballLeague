@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj": {}
+    "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj": {
+    "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj",
+        "projectUniqueName": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj",
         "projectName": "FootballLeaguesStandingsTableProject.Desktop",
-        "projectPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj",
-        "packagesPath": "C:\\Users\\beckh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Desktop\\obj\\",
+        "projectPath": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj",
+        "packagesPath": "C:\\Users\\Lyubomir\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject.Desktop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\beckh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lyubomir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -34,8 +34,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj": {
-                "projectPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj"
+              "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj": {
+                "projectPath": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj"
               }
             }
           }
@@ -50,6 +50,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Avalonia.Controls.DataGrid": {
+              "target": "Package",
+              "version": "[11.0.4, )"
+            },
             "Avalonia.Desktop": {
               "target": "Package",
               "version": "[11.0.4, )"
@@ -79,21 +83,21 @@
         }
       }
     },
-    "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj": {
+    "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
+        "projectUniqueName": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
         "projectName": "FootballLeaguesStandingsTableProject",
-        "projectPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
-        "packagesPath": "C:\\Users\\beckh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\obj\\",
+        "projectPath": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
+        "packagesPath": "C:\\Users\\Lyubomir\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Avalonia Projects\\FootballLeaguesStandingsTableProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\beckh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lyubomir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -126,6 +130,10 @@
               "version": "[3.2.0, )"
             },
             "Avalonia": {
+              "target": "Package",
+              "version": "[11.0.4, )"
+            },
+            "Avalonia.Controls.DataGrid": {
               "target": "Package",
               "version": "[11.0.4, )"
             },
