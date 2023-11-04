@@ -157,9 +157,9 @@ public partial class MainViewModel : ViewModelBase
 
 	public LeagueModel GetLeaugeStandings(int leagueId)
 	{
-		//var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeagueStandingsModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\PremierLeague.json"));
-		//var jsonPL = File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\PremierLeague.json");
-		//var deserializedData = JObject.Parse(jsonPL)["response"].Select(x => x["league"].ToObject<LeagueModel>()).ToList();
+		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeagueStandingsModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\PremierLeague.json"));
+		var jsonPL = File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\PremierLeague.json");
+		var deserializedData = JObject.Parse(jsonPL)["response"].Select(x => x["league"].ToObject<LeagueModel>()).ToList();
 		//if (rawLeaguesDataJSON != null)
 		//{
 		//	foreach (var team in rawLeaguesDataJSON.Response)
@@ -169,22 +169,31 @@ public partial class MainViewModel : ViewModelBase
 		//		var stnds = JsonConvert.DeserializeObject<FootballTeamInfoModel>(standings.StandingsData.ToString());
 		//	}
 		//}
+
 		var leagueData = new LeagueModel();
-		var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
-		var request = new RestRequest($"https://v3.football.api-sports.io/standings?league={leagueId}&season={DateTime.Now.Year}", Method.Get) { RequestFormat = DataFormat.Json };
-
-		request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");//key 1 - 5030880d82b1e6f3ee3612cb64c53569 | key 2 - e09dc70c29b92c46a363d3b5bb3d42ee
-		request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
-
-		//call the API
-		RestResponse response = client.Execute(request);
-
-		//if the API call is good parse the date from the API and place it in the returnig collection
-		if (response.StatusCode == System.Net.HttpStatusCode.OK)
+		if (deserializedData != null && deserializedData.FirstOrDefault() as LeagueModel != null)
 		{
-			//	leaguesList = new ObservableCollection<FootballCountryModel>(JObject.Parse(response.Content)["response"].Select(x => x["league"].ToObject<FootballCountryModel>()).ToList());
-			 leagueData = JObject.Parse(response.Content)["response"].Select(x => x["league"].ToObject<LeagueModel>()).FirstOrDefault();
+			leagueData = new LeagueModel(deserializedData.FirstOrDefault());
 		}
+		else
+		{
+		  leagueData = new LeagueModel();
+		}
+		//var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
+		//var request = new RestRequest($"https://v3.football.api-sports.io/standings?league={leagueId}&season={DateTime.Now.Year}", Method.Get) { RequestFormat = DataFormat.Json };
+
+		//request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");//key 1 - 5030880d82b1e6f3ee3612cb64c53569 | key 2 - e09dc70c29b92c46a363d3b5bb3d42ee
+		//request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
+
+		////call the API
+		//RestResponse response = client.Execute(request);
+
+		////if the API call is good parse the date from the API and place it in the returnig collection
+		//if (response.StatusCode == System.Net.HttpStatusCode.OK)
+		//{
+		//	//	leaguesList = new ObservableCollection<FootballCountryModel>(JObject.Parse(response.Content)["response"].Select(x => x["league"].ToObject<FootballCountryModel>()).ToList());
+		//	 leagueData = JObject.Parse(response.Content)["response"].Select(x => x["league"].ToObject<LeagueModel>()).FirstOrDefault();
+		//}
 
 		return leagueData;
 	}
