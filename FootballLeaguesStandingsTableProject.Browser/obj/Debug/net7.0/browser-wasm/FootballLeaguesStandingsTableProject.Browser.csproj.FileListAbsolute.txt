@@ -1241,3 +1241,6 @@ D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Browser\obj\D
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\FootballLeaguesStandingsTableProject.Browser.pdb
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\FootballLeaguesStandingsTableProject.Browser.genruntimeconfig.cache
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\ref\FootballLeaguesStandingsTableProject.Browser.dll
+C:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Browser\bin\Debug\net7.0\browser-wasm\AsyncImageLoader.Avalonia.dll
+C:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Browser\bin\Debug\net7.0\browser-wasm\OxyPlot.Avalonia.dll
+C:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Browser\bin\Debug\net7.0\browser-wasm\OxyPlot.dll

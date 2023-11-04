@@ -528,3 +528,5 @@ D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Desktop\obj\D
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Desktop\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.Desktop.pdb
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Desktop\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.Desktop.genruntimeconfig.cache
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject.Desktop\obj\Debug\net7.0\ref\FootballLeaguesStandingsTableProject.Desktop.dll
+C:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Desktop\bin\Debug\net7.0\OxyPlot.Avalonia.dll
+C:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Desktop\bin\Debug\net7.0\OxyPlot.dll

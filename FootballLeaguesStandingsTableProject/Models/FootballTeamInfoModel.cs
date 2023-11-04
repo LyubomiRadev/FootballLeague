@@ -96,6 +96,9 @@ public class FootballTeamInfoModel
 	[JsonProperty("points")]
 	public int Points { get; set; }
 
+	[JsonProperty("all")]
+	public GamesData? GamesData { get; set; }
+
 }
 
 public class FootballTeamModel
@@ -108,6 +111,24 @@ public class FootballTeamModel
 
 	[JsonProperty("logo")]
 	public string? Logo { get; set; }
+
+	[JsonProperty("goalsDiff")]
+	public string? GoalsDifference { get; set; }
+}
+
+public class GamesData
+{
+	[JsonProperty("played")]
+	public int GamesPlayed { get; set; }
+
+	[JsonProperty("win")]
+	public int GamesWon { get; set; }
+
+	[JsonProperty("draw")]
+	public int GamesDrawn { get; set; }
+
+	[JsonProperty("lose")]
+	public int GamesLost { get; set; }
 }
 
 

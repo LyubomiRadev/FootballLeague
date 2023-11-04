@@ -141,6 +141,14 @@
     },
     {
       "behavior": "assembly",
+      "name": "OxyPlot.Avalonia.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "OxyPlot.dll"
+    },
+    {
+      "behavior": "assembly",
       "name": "RestSharp.dll"
     },
     {

@@ -5,6 +5,9 @@ using FootballLeaguesStandingsTableProject.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+using OxyPlot;
+using OxyPlot.Series;
+
 using RestSharp;
 
 using System;
@@ -38,6 +41,21 @@ public partial class MainViewModel : ViewModelBase
 	[ObservableProperty]
 	public ObservableCollection<FootballTeamInfoModel> _standings = new ObservableCollection<FootballTeamInfoModel>();
 
+	[ObservableProperty]
+	public FootballTeamInfoModel _selectedTeam = new FootballTeamInfoModel();
+
+	[ObservableProperty]
+	public ObservableCollection<PieSliceItemModel> _pieChartData = new ObservableCollection<PieSliceItemModel>();
+
+	[ObservableProperty]
+	public string _pieChartTitle = string.Empty;
+
+	[ObservableProperty]
+	public PieSeries _slices = new PieSeries();
+
+	[ObservableProperty]
+	public PlotModel plotModel = new PlotModel();
+
 	#endregion
 
 	#region Methods
@@ -61,6 +79,25 @@ public partial class MainViewModel : ViewModelBase
 			var data = new LeagueModel(this.GetLeaugeStandings(leagueId: this.SelectedFootballLeague.ID));
 			this.LeagueData = new LeagueModel(data: data,getStandingsCollection: true);
 			this.Standings = new ObservableCollection<FootballTeamInfoModel>(this.LeagueData.StandingsCollection);
+			this.SelectedTeam = this.Standings.FirstOrDefault();
+		}
+		else if (e.PropertyName == nameof(SelectedTeam))
+		{
+			this.PieChartTitle = $"{this.SelectedTeam.TeamData.Name} statistics";
+			this.PieChartData = new ObservableCollection<PieSliceItemModel>()
+			{
+				new PieSliceItemModel{Name = "Won", PercentageValue = this.SelectedTeam.GamesData.GamesWon, IsExploded = true},
+				new PieSliceItemModel{Name = "Drawn", PercentageValue = this.SelectedTeam.GamesData.GamesDrawn, IsExploded = true},
+				new PieSliceItemModel{Name = "Lost", PercentageValue = this.SelectedTeam.GamesData.GamesLost, IsExploded = true},
+			};
+
+			this.PlotModel = new PlotModel() { Title = $"{this.SelectedTeam.TeamData.Name} statistics" };
+			this.Slices = new PieSeries() { TextColor = OxyColors.White };
+			this.Slices.Slices.Add(new PieSlice("Won", this.SelectedTeam.GamesData.GamesWon) {IsExploded = true, Fill = OxyColors.Green });
+			this.Slices.Slices.Add(new PieSlice("Drawn", this.SelectedTeam.GamesData.GamesDrawn) {IsExploded = true, Fill = OxyColors.Ivory });
+			this.Slices.Slices.Add(new PieSlice("Lost", this.SelectedTeam.GamesData.GamesLost) {IsExploded = true, Fill = OxyColors.Red });
+
+			this.PlotModel.Series.Add(this.Slices);	
 		}
 	}
 
@@ -94,7 +131,7 @@ public partial class MainViewModel : ViewModelBase
 
 		//path for Desktop PC => C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json
 		//path for Laptop => D:\Projects\Avalonia Projects\JSonLeagues.json
-		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"D:\Projects\Avalonia Projects\JSonLeagues.json"));
+		var rawLeaguesDataJSON = JsonConvert.DeserializeObject<LeaguesDeserializedModel>(File.ReadAllText(@"C:\Users\beckh\source\repos\FootballLeague\JSonLeagues.json"));
 		leaguesList = new ObservableCollection<FootballCountryModel>();
 
 		foreach (var rawLeagueData in rawLeaguesDataJSON.Response)
@@ -136,7 +173,7 @@ public partial class MainViewModel : ViewModelBase
 		var client = new RestClient("https://v3.football.api-sports.io/{endpoint}");
 		var request = new RestRequest($"https://v3.football.api-sports.io/standings?league={leagueId}&season={DateTime.Now.Year}", Method.Get) { RequestFormat = DataFormat.Json };
 
-		request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");
+		request.AddHeader("x-rapidapi-key", "5030880d82b1e6f3ee3612cb64c53569");//key 1 - 5030880d82b1e6f3ee3612cb64c53569 | key 2 - e09dc70c29b92c46a363d3b5bb3d42ee
 		request.AddHeader("x-rapidapi-host", "v3.football.api-sports.io");
 
 		//call the API
@@ -155,4 +192,13 @@ public partial class MainViewModel : ViewModelBase
 
 	#endregion
 
+}
+
+public class PieSliceItemModel
+{
+    public string Name { get; set; }
+
+    public double PercentageValue { get; set; }
+
+    public bool IsExploded { get; set; }
 }

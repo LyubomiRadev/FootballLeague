@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FootballLeaguesStandingsTableProject.ViewModels"
              xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             xmlns:oxy="using:OxyPlot.Avalonia"
              mc:Ignorable="d"
              d:DesignWidth="800"
              d:DesignHeight="450"
@@ -17,6 +18,11 @@
     </Design.DataContext>
 
     <Grid RowDefinitions="Auto, Auto, Auto, *, 10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
         <ComboBox Grid.Row="0"
                   ItemsSource="{Binding FootballLeaguesList}"
@@ -41,7 +47,8 @@
         <DataGrid Grid.Row="1"
                   Width="300"
                   Height="400"
-                  ItemsSource="{Binding Standings}">
+                  ItemsSource="{Binding Standings}"
+                  SelectedItem="{Binding SelectedTeam}">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#"
@@ -52,21 +59,49 @@
                 </DataGridTextColumn>
 
                 <DataGridTextColumn Header="#"
-                    FontWeight="Bold"
+                                    FontWeight="Bold"
                                     Foreground="Black"
-                    Binding="{Binding TeamData.Name}">
+                                    Binding="{Binding TeamData.Name}">
 
                 </DataGridTextColumn>
 
                 <DataGridTextColumn Header="Points"
                                     Foreground="Black"
-                                   FontWeight="Bold"
-                                   Binding="{Binding Points}">
+                                    FontWeight="Bold"
+                                    Binding="{Binding Points}">
 
                 </DataGridTextColumn>
             </DataGrid.Columns>
 
         </DataGrid>
+
+        <!--<oxy:Plot Grid.Row="1"
+                  Grid.Column="1"
+                  Title="{Binding PieChartTitle}">
+            <oxy:Plot.Series>
+                <oxy:PieSeries
+                    InnerDiameter="0"
+                    ExplodedDistance="0"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    StartAngle="0"
+                    AngleSpan="360"
+                    ItemsSource="{Binding PieChartData}"
+                    LabelField="Name"
+                    ValueField="PercentageValue"
+                    IsExplodedField="IsExploded"
+                    Foreground="White"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>-->
+
+        <oxy:Plot Grid.Row="1"
+                  Grid.Column="1"
+                  Width="100"
+                  Height="200">
+            <oxy:Plot.Series>
+                <oxy:PieSeries ItemsSource="{Binding Slices}" />
+            </oxy:Plot.Series>
+        </oxy:Plot>
 
     </Grid>
 </UserControl>
