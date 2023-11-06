@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 using FootballLeaguesStandingsTableProject.Models;
+using FootballLeaguesStandingsTableProject.Views;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -18,16 +19,36 @@ using System.IO;
 using System.Linq;
 
 namespace FootballLeaguesStandingsTableProject.ViewModels;
+public class ContinentItem
+{
+	public string? Name { get; set; }
 
+	public double PopulationInMillions { get; set; }
+
+	public bool IsExploded { get; set; }
+}
 public partial class MainViewModel : ViewModelBase
 {
 
 	public MainViewModel()
 	{
 		this.LoadLeagues();
+
+		Continents = new ObservableCollection<ContinentItem>
+		{
+			new ContinentItem { Name = "Africa", PopulationInMillions = 1030, IsExploded = true },
+			new ContinentItem { Name = "Americas", PopulationInMillions = 929, IsExploded = true },
+			new ContinentItem { Name = "Asia", PopulationInMillions = 4157 },
+			new ContinentItem { Name = "Europe", PopulationInMillions = 739, IsExploded = true },
+			new ContinentItem { Name = "Oceania", PopulationInMillions = 35, IsExploded = true }
+		};
+
 	}
 
 	#region Properties
+
+	[ObservableProperty]
+	public ObservableCollection<ContinentItem> _continents = new ObservableCollection<ContinentItem>();
 
 	[ObservableProperty]
 	public ObservableCollection<FootballCountryModel> _footballLeaguesList = new ObservableCollection<FootballCountryModel>();
