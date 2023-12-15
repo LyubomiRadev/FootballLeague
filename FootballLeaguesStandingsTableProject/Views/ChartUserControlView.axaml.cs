@@ -72,33 +72,35 @@ namespace FootballLeaguesStandingsTableProject.Views
 			var radius = 150;
 			var totalGames = this.SectionsNumber.GamesData.GamesLost + this.SectionsNumber.GamesData.GamesDrawn + this.SectionsNumber.GamesData.GamesWon;
 
-			double lostAngle = 360.0 * this.SectionsNumber.GamesData.GamesLost / totalGames;
-			double drawnAngle = 360.0 * this.SectionsNumber.GamesData.GamesDrawn / totalGames;
-			double wonAngle = 360.0 * this.SectionsNumber.GamesData.GamesWon / totalGames;
-
-
-			if (this.SectionsNumber.GamesData.GamesLost > 0)
+			if (totalGames > 0)
 			{
-				var lostPath = CreatePieSlice(center, radius, 0, lostAngle, CreateGradientBrush(Colors.Red, Colors.Orange));
-				lostPath.PointerEntered += (sender, e) => OnSliceHoverEnter(lostPath, $"Games lost: {this.SectionsNumber.GamesData.GamesLost}");
-				lostPath.PointerExited += (sender, e) => OnSliceHoverLeave(lostPath);
-				canvas.Children.Add(lostPath);
-			}
+				double lostAngle = 360.0 * this.SectionsNumber.GamesData.GamesLost / totalGames;
+				double drawnAngle = 360.0 * this.SectionsNumber.GamesData.GamesDrawn / totalGames;
+				double wonAngle = 360.0 * this.SectionsNumber.GamesData.GamesWon / totalGames;
 
-			if (this.SectionsNumber.GamesData.GamesDrawn > 0)
-			{
-				var drawnPath = CreatePieSlice(center, radius, lostAngle, drawnAngle, CreateGradientBrush(Colors.Gray, Colors.DarkGray));
-				drawnPath.PointerEntered += (sender, e) => OnSliceHoverEnter(drawnPath, $"Games drawn: {this.SectionsNumber.GamesData.GamesDrawn}");
-				drawnPath.PointerExited += (sender, e) => OnSliceHoverLeave(drawnPath);
-				canvas.Children.Add(drawnPath);
-			}
+				if (this.SectionsNumber.GamesData.GamesLost > 0)
+				{
+					var lostPath = CreatePieSlice(center, radius, 0, lostAngle, CreateGradientBrush(Colors.Red, Colors.Orange));
+					lostPath.PointerEntered += (sender, e) => OnSliceHoverEnter(lostPath, $"Games lost: {this.SectionsNumber.GamesData.GamesLost}");
+					lostPath.PointerExited += (sender, e) => OnSliceHoverLeave(lostPath);
+					canvas.Children.Add(lostPath);
+				}
 
-			if (this.SectionsNumber.GamesData.GamesWon > 0)
-			{
-				var wonPath = CreatePieSlice(center, radius, lostAngle + drawnAngle, wonAngle, CreateGradientBrush(Colors.Green, Colors.Yellow));
-				wonPath.PointerEntered += (sender, e) => OnSliceHoverEnter(wonPath, $"Games won: {this.SectionsNumber.GamesData.GamesWon}");
-				wonPath.PointerExited += (sender, e) => OnSliceHoverLeave(wonPath);
-				canvas.Children.Add(wonPath);
+				if (this.SectionsNumber.GamesData.GamesDrawn > 0)
+				{
+					var drawnPath = CreatePieSlice(center, radius, lostAngle, drawnAngle, CreateGradientBrush(Colors.Gray, Colors.DarkGray));
+					drawnPath.PointerEntered += (sender, e) => OnSliceHoverEnter(drawnPath, $"Games drawn: {this.SectionsNumber.GamesData.GamesDrawn}");
+					drawnPath.PointerExited += (sender, e) => OnSliceHoverLeave(drawnPath);
+					canvas.Children.Add(drawnPath);
+				}
+
+				if (this.SectionsNumber.GamesData.GamesWon > 0)
+				{
+					var wonPath = CreatePieSlice(center, radius, lostAngle + drawnAngle, wonAngle, CreateGradientBrush(Colors.Green, Colors.Yellow));
+					wonPath.PointerEntered += (sender, e) => OnSliceHoverEnter(wonPath, $"Games won: {this.SectionsNumber.GamesData.GamesWon}");
+					wonPath.PointerExited += (sender, e) => OnSliceHoverLeave(wonPath);
+					canvas.Children.Add(wonPath);
+				}
 			}
 
 			// Create a TextBlock for tooltips
@@ -121,8 +123,6 @@ namespace FootballLeaguesStandingsTableProject.Views
 			canvas.Children.Add(centralCirclePath);
 		}
 
-
-
 		private Avalonia.Controls.Shapes.Path CreatePieSlice(Point center, double radius, double startAngle, double sweepAngle, GradientBrush fillBrush)
 		{
 			var pathGeometry = new PathGeometry();
@@ -132,10 +132,14 @@ namespace FootballLeaguesStandingsTableProject.Views
 				StartPoint = center,
 			};
 
+			// Calculate the starting point of the slice on the circumference
 			var radiansPerDegree = Math.PI / 180.0;
 			var startPoint = new Point(center.X + radius * Math.Cos(startAngle * radiansPerDegree), center.Y + radius * Math.Sin(startAngle * radiansPerDegree));
 
+			// Add a line segment from the center to the starting point
 			figure.Segments.Add(new LineSegment { Point = startPoint });
+
+			// Add an arc segment representing the pie slice
 			figure.Segments.Add(new ArcSegment
 			{
 				Size = new Size(radius, radius),
@@ -144,8 +148,10 @@ namespace FootballLeaguesStandingsTableProject.Views
 				SweepDirection = SweepDirection.Clockwise,
 			});
 
+			// Add the figure to the path geometry
 			pathGeometry.Figures.Add(figure);
 
+			// Create a new Avalonia.Controls.Shapes.Path with the specified data and fill
 			var path = new Avalonia.Controls.Shapes.Path
 			{
 				Data = pathGeometry,
@@ -155,6 +161,7 @@ namespace FootballLeaguesStandingsTableProject.Views
 
 			return path;
 		}
+
 
 		private LinearGradientBrush CreateGradientBrush(Color color1, Color color2)
 		{
