@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TmRPP3R9AyqtDv2n8C/+OoPSNg6kCFzOclW+0DC0PbZPig560b1UynOdL3yc9OeVN3TCSAS0+cgyB/VS/LUoIg==",
+  "dgSpecHash": "612JHS7yVODxXeLVxw7+d1xbDLllrvnfBccP9ZyYaV1qAJTn+X5ltFkTKIxJyfJ3f5IiIEfpuaaNfeRTa8bcRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Browser\\FootballLeaguesStandingsTableProject.Browser.csproj",
+  "projectFilePath": "D:\\SoftwareProjects\\Avalonia\\FootballAndCharts\\FootballLeaguesStandingsTableProject.Browser\\FootballLeaguesStandingsTableProject.Browser.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\beckh\\.nuget\\packages\\asyncimageloader.avalonia\\3.2.0\\asyncimageloader.avalonia.3.2.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia\\11.0.4\\avalonia.11.0.4.nupkg.sha512",
@@ -29,6 +29,8 @@
     "C:\\Users\\beckh\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\3.8.0\\microsoft.codeanalysis.csharp.scripting.3.8.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\3.8.0\\microsoft.codeanalysis.scripting.common.3.8.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\beckh\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\beckh\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",

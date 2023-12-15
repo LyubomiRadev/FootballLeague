@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FootballLeaguesStandingsTableProject.ViewModels"
+             xmlns:uc="clr-namespace:FootballLeaguesStandingsTableProject.Views;assembly=FootballLeaguesStandingsTableProject"
              xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
              xmlns:oxy="using:OxyPlot.Avalonia"
              mc:Ignorable="d"
@@ -17,7 +18,7 @@
         <vm:MainViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="Auto, *, *, Auto, 10"
+    <Grid RowDefinitions="Auto, *, 10"
           Margin="5">
 
         <Grid.ColumnDefinitions>
@@ -26,6 +27,9 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
+
+        <!--League Selection Combobox-->
+       
         <ComboBox Grid.Row="0"
                   Margin="0,0,0,5"
                   ItemsSource="{Binding FootballLeaguesList}"
@@ -47,6 +51,8 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
+        
+        <!--League table-->
         <DataGrid Grid.Row="1"
                   Width="400"
                   AutoGenerateColumns="False"
@@ -97,55 +103,11 @@
 
         </DataGrid>
 
-        <oxy:Plot Grid.Row="1"
-                  Grid.Column="1"
-                  Width="500"
-                  Title="{Binding PieChartTitle}">
-            <oxy:Plot.Series>
-                <oxy:PieSeries
-                    InnerDiameter="0"
-                    ExplodedDistance="0"
-                    Stroke="Black"
-                    StrokeThickness="2"
-                    StartAngle="0"
-                    AngleSpan="360"
-                    ItemsSource="{Binding PieChartData}"
-                    LabelField="Name"
-                    ValueField="PercentageValue"
-                    IsExplodedField="IsExploded"
-                    Foreground="White"/>
-            </oxy:Plot.Series>
-        </oxy:Plot>
-
-
-        <oxy:Plot Grid.Row="2"
-                  Grid.Column="0"
-                  Grid.ColumnSpan="3"
-                  Title="Testing Pie Chart"
-                  Margin="10,0,0,0">
-            <oxy:Plot.Series>
-                <oxy:PieSeries
-                    InnerDiameter="0"
-                    ExplodedDistance="0"
-                    Stroke="Black"
-                    StrokeThickness="1"
-                    StartAngle="0"
-                    AngleSpan="360"
-                    ItemsSource="{Binding Continents}"
-                    LabelField="Name"
-                    ValueField="PopulationInMillions"
-                    IsExplodedField="IsExploded"
-                    Foreground="BlueViolet"/>
-            </oxy:Plot.Series>
-        </oxy:Plot>
+        <!--Statistics Chart-->
+        <uc:ChartUserControlView Grid.Row="1"
+                                 Grid.Column="1"
+                                 SectionsNumber="{Binding SelectedTeam}"/>
         
-        <!--<oxy:Plot Grid.Row="1"
-                  Grid.Column="2"
-                  Background="Red">
-            <oxy:Plot.Series>
-                <oxy:PieSeries ItemsSource="{Binding Slices}" />
-            </oxy:Plot.Series>
-        </oxy:Plot>-->
-
+        
     </Grid>
 </UserControl>

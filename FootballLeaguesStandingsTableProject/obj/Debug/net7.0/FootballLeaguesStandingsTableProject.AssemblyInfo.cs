@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FootballLeaguesStandingsTableProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fece1459d4deb58ec435da0687bf375586f5f0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FootballLeaguesStandingsTableProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FootballLeaguesStandingsTableProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

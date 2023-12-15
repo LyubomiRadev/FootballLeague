@@ -3821,11 +3821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
+      "projectUniqueName": "D:\\SoftwareProjects\\Avalonia\\FootballAndCharts\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
       "projectName": "FootballLeaguesStandingsTableProject",
-      "projectPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
+      "projectPath": "D:\\SoftwareProjects\\Avalonia\\FootballAndCharts\\FootballLeaguesStandingsTableProject\\FootballLeaguesStandingsTableProject.csproj",
       "packagesPath": "C:\\Users\\beckh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject\\obj\\",
+      "outputPath": "D:\\SoftwareProjects\\Avalonia\\FootballAndCharts\\FootballLeaguesStandingsTableProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -3917,7 +3917,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

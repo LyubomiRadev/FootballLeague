@@ -70,3 +70,22 @@ D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject\obj\Debug\net
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.dll
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.pdb
 D:\Projects\Avalonia Projects\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\ref\FootballLeaguesStandingsTableProject.dll
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\bin\Debug\net7.0\FootballLeaguesStandingsTableProject.deps.json
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\bin\Debug\net7.0\FootballLeaguesStandingsTableProject.dll
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\bin\Debug\net7.0\FootballLeaguesStandingsTableProject.pdb
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.csproj.AssemblyReference.cache
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\Avalonia\Resources.Inputs.cache
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\Avalonia\resources
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.AssemblyInfoInputs.cache
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.AssemblyInfo.cs
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.csproj.CoreCompileInputs.cache
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.sourcelink.json
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\Avalonia\references
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\Avalonia\original.dll
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\Avalonia\original.pdb
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\Avalonia\original.ref.dll
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\refint\FootballLeaguesStandingsTableProject.dll
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.dll
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\FootballLeaguesStandingsTableProject.pdb
+D:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject\obj\Debug\net7.0\ref\FootballLeaguesStandingsTableProject.dll

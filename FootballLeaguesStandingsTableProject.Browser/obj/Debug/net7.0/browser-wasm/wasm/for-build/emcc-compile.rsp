@@ -10,7 +10,7 @@
 -DCORE_BINDINGS
 -DGEN_PINVOKE=1
 -emit-llvm
-"-IC:\Users\beckh\source\repos\FootballLeague\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\wasm\for-build"
-"-IC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\7.0.12\runtimes\browser-wasm\native\include\mono-2.0"
-"-IC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\7.0.12\runtimes\browser-wasm\native\include\wasm"
+"-ID:\SoftwareProjects\Avalonia\FootballAndCharts\FootballLeaguesStandingsTableProject.Browser\obj\Debug\net7.0\browser-wasm\wasm\for-build"
+"-IC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\7.0.14\runtimes\browser-wasm\native\include\mono-2.0"
+"-IC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\7.0.14\runtimes\browser-wasm\native\include\wasm"
 -g

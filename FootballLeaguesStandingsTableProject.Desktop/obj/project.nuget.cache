@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iC57KD5R+lXlmg3Y9EYyI2G3GDBxOU4xL+0b0qPKAH2HbAfjyMXc8HVhzfOrrzPsHdIynz9rsU3ul2LfKKgUEA==",
+  "dgSpecHash": "3gJJOLlCNM8vrix+CTWyOfUuG1q6oh4aw4Hcf9l8z+iiaQSImDV934jWTUhJdaU9fabM2nTHvRgVM9ybpx1zfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\beckh\\source\\repos\\FootballLeague\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj",
+  "projectFilePath": "D:\\SoftwareProjects\\Avalonia\\FootballAndCharts\\FootballLeaguesStandingsTableProject.Desktop\\FootballLeaguesStandingsTableProject.Desktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\beckh\\.nuget\\packages\\asyncimageloader.avalonia\\3.2.0\\asyncimageloader.avalonia.3.2.0.nupkg.sha512",
     "C:\\Users\\beckh\\.nuget\\packages\\avalonia\\11.0.4\\avalonia.11.0.4.nupkg.sha512",
